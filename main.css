@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #232F3E;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FE500A;
+    border-radius: 5px;
+}
+
+/*social style*/
+.social-outer {
+    width: 50px;
+    height: 200px;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.social-inner-wrap {
+    flex: 1;
+    /* border: 1px solid black;*/
+    position: relative;
+}
+
+.slide-context {
+    background-color: white;
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    color: #FE500A;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.social-inner-wrap:hover > .slide-context {
+    right: 49px;
+}
+
+.social-logo {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-logo:hover {
+    background-color: #FF500A;
+    color: white;
+}
+
+/*social style*/
+
+
+.main-slider-outer {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://wallpapershome.com/images/wallpapers/miami-3840x2160-south-beach-hotel-pool-sunbed-water-palm-sky-sea-1130.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*nav styles*/
+
+.nav-outer {
+    width: 100%;
+    height: 70px;
+    background-color: #0F172B;
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 100;
+}
+
+.logo-outer {
+    /*border: 1px solid red;*/
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.logo-outer > img {
+    height: 50px;
+}
+
+.nav-bar-context {
+    /*border: 1px solid red;*/
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*nav*/
+.nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav > li > span > a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nav > li {
+    border-bottom: 2px solid transparent;
+    transition: 1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    margin: 0 20px;
+}
+
+.nav > li:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+
+.nav > li:hover {
+    cursor: pointer;
+    /*border-bottom: 2px solid white;*/
+    border-color: white;
+}
+
+.nav > li:hover > span > a {
+    color: #FE500A;
+}
+
+/*.nav > li:nth-child(3){
+    border-bottom: 1px solid white;
+}*/
+
+.book-button {
+    padding: 8px 15px;
+    background: none;
+    margin: 0 20px;
+    border: 1px solid #FE500A;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #FE500A;
+    color: white;
+}
+
+/*nav*/
+
+/*search style*/
+.search-wrapper {
+    width: 400px;
+    margin-right: 10px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+}
+
+.search-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    width: 50px;
+    height: 100%;
+    background-color: #DADADA;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-wrapper > input[type=search] {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 0 15px;
+    /*text-align: right;*/
+}
+
+.search-wrapper > input[type=search]:focus {
+    outline: none;
+}
+
+.search-icon {
+    width: 50px;
+    height: 100%;
+    background-color: #FE500A;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*search style*/
+
+/*slider-middle-text style*/
+.middle-text-outer {
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid red;*/
+    position: relative;
+}
+
+.book-today-text {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #0A5AFE;
+    font-size: 55px;
+}
+
+.weekend-offer-text {
+    text-align: center;
+    color: #0A5AFE;
+    font-weight: bold;
+    font-family: 'Alkalami', serif;
+}
+
+/*slider-middle-text style*/
+
+/*booking-widget-style*/
+.widget-main-outer {
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid red;*/
+    margin-top: 50px;
+}
+
+.widget-inner {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+}
+
+.widget-components-wrapper:first-child {
+    width: 40%;
+}
+
+.widget-components-wrapper {
+    height: 100%;
+    /* border: 1px solid red;*/
+    width: 20%;
+    display: flex;
+}
+
+.widget-components-wrapper > input[type=date],
+.widget-components-wrapper > select {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 16px;
+    border: none;
+}
+
+.widget-components-wrapper > input[type=date]:focus,
+.widget-components-wrapper > select:focus {
+    outline: none;
+}
+
+.widget-components-wrapper > input[type=submit] {
+    flex: 1;
+    border: none;
+    background-color: #FF500A;
+    color: white;
+    font-size: 16px;
+}
+
+.widget-components-wrapper > input[type=submit]:hover {
+    background-color: #0F172B;
+    color: white;
+    cursor: pointer;
+}
+
+/*booking-widget-style*/
+
+/*nav styles*/
+
+/*about styles*/
+.about-wrapper {
+    width: 100%;
+    height: 300px;
+    /* border: 1px solid red;*/
+    display: flex;
+}
+
+.about-inner:first-child {
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.about-inner {
+    /* border: 1px solid red;*/
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about-inner > p {
+    font-size: 16px;
+    color: darkgray;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.welcome-text {
+    color: #FE500A;
+    font-size: 80px;
+    text-align: center;
+    /*border: 1px solid red;*/
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.enjoy-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-top: -40px;
+}
+
+/*about styles*/
+
+/*Services style*/
+.service-main-outer {
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid red;*/
+    display: flex;
+}
+
+.service-inner {
+    flex: 1;
+    /*border: 1px solid red;*/
+    background-size: cover;
+    background-position: center;
+
+}
+
+.service-inner:hover {
+    cursor: pointer;
+    margin-top: -40px;
+    transition: 0.8s ease-in-out;
+}
+
+.service-inner:first-child {
+    background-image: url("https://img.freepik.com/free-photo/breakfast-wooden-table-with-natural-view_53876-139868.jpg?w=360&t=st=1664989239~exp=1664989839~hmac=4975a7f7b986395ed0e2f989bebf042de67b180635958c888883e826315973f7");
+}
+
+.service-inner:nth-child(2) {
+    background-image: url("https://img.freepik.com/free-photo/relax-corner-room_1150-18006.jpg?w=360&t=st=1664989261~exp=1664989861~hmac=1d6d5c2b7a73f45c0312e51141d0d9f44a49d263bdd8b0cbf43aab698ccef453");
+}
+
+.service-inner:nth-child(3) {
+    background-image: url("https://img.freepik.com/free-photo/sexy-blonde-woman-posing-luxury-hotel_496169-585.jpg?w=360&t=st=1664989275~exp=1664989875~hmac=9ea2a3f6a2b116053183d4455e670f15bb60cd04500dfe0fb44fbb83ce0a3334");
+}
+
+.service-inner:last-child {
+    background-image: url("https://img.freepik.com/free-photo/banquet-table-with-snacks_144627-18360.jpg?w=360&t=st=1664989296~exp=1664989896~hmac=6b55dcabc8816eff9253a57fdad9e19e625de3dda8991caaec55b9377a5fc4c9");
+}
+
+.shadow-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(15, 23, 43, 0.5);
+}
+
+.show-wrapper {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden-wrapper {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: none;
+}
+
+.service-inner:hover > .shadow-wrapper > .show-wrapper {
+    display: none;
+}
+
+.service-inner:hover > .shadow-wrapper > .hidden-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.show-wrapper > p {
+    text-align: center;
+}
+
+.show-wrapper > h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-wrapper > p > i {
+    font-size: 55px;
+    color: white;
+}
+
+.show-wrapper > h2 {
+    font-size: 25px;
+    color: white;
+}
+
+.hidden-wrapper > p {
+    text-align: justify;
+    color: white;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+}
+
+/*Services style*/
+
+/*blog-style*/
+.blog-outer {
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid red;*/
+    margin: 50px 0;
+}
+
+.blog-inner {
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid red;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-items-wrapper {
+    width: 30%;
+    height: 100%;
+  /*  border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-items-img-wrap {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.i1 {
+    background-image: url("https://img.freepik.com/free-photo/banquet-table-with-snacks_144627-18361.jpg?w=740&t=st=1664993385~exp=1664993985~hmac=fb15ffa37f2bfe946cd177c7ac7228c45286ba519987b323e6bc7c55344bbfde");
+}
+
+.i2 {
+    background-image: url("https://img.freepik.com/free-photo/swimming-pool_74190-2109.jpg?w=740&t=st=1664993454~exp=1664994054~hmac=d43d8e6e0108c3e42760bb2b5a6bc15cb9d9bf51137c178142004e2c47b7a4f5");
+}
+
+.i3 {
+    background-image: url("https://img.freepik.com/free-photo/modern-studio-apartment-design-with-bedroom-living-space_1262-12375.jpg?w=740&t=st=1664993477~exp=1664994077~hmac=1d9f0f6d81f4194934ea640cfcfa415d6498974aa3a5d414130b39cfe03f24d8");
+}
+.blog-desc{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.blog-desc p{
+    text-align: justify;
+    padding: 0 20px;
+}
+/*blog-style*/
